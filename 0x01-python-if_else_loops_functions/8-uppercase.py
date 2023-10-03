@@ -4,7 +4,7 @@ def uppercase(str):
     y = 0
     length = len(str)
     while x < length + 1:
-        if x > 97:
+        if ord(str[x]) > 97:
             y = chr(ord(str[x]) - 32)
         print("{}".format(y), end="")
         x = x + 1
