@@ -7,4 +7,5 @@ def uppercase(str):
         if x > 97:
             y = chr(ord(str[x]) - 32)
         print("{}".format(y), end="")
+        x = x + 1
     print("/n")
