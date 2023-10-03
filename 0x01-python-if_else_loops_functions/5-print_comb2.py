@@ -4,5 +4,5 @@ while x < 100:
     if x == 99:
         print("{}".format(x),end="")
     else:
-        print("{}".format(x),end=", ")
+        print("{:02}".format(x),end=", ")
     x = x + 1
