@@ -5,7 +5,7 @@
  * @number: int to insert to the list
  * Return: a new node or NULL
  */
-istint_t *insert_node(listint_t **head, int number)
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *a = *head;
 	listint_t *ne = malloc(sizeof(listint_t));
