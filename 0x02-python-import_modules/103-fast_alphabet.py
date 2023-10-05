@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-# increasing lines duh
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+import string
+print(string.ascii_uppercase)
