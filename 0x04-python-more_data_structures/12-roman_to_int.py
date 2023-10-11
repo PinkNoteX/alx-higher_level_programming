@@ -6,8 +6,9 @@ def roman_to_int(roman_string):
                         'M': 1000}
     diclist = list(dic)
     store = 0
-    for r in roman_string:
-        for x in diclist:
-            if x == r:
-                store = store + dic.get(x)
-    return store
+    if roman_string and isinstance(roman_string, str):
+        for r in roman_string:
+            for x in diclist:
+                if x == r:
+                    store = store + dic.get(x)
+        return store
