@@ -2,7 +2,7 @@
 def weight_average(my_list=[]):
     listlen = len(my_list)
     x = store1 = store2 = 0
-    if listlen is 0:
+    if listlen == 0:
         return 0
     while x < listlen:
         store2 = store2 + my_list[x][1]
