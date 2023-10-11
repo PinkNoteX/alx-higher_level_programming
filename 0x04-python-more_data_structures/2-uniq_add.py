@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    store = 0
-    my_list = list(dict.fromkeys(my_list))
-    for l in my_list:
-        store = store + my_list[l-1]
+    newlist = []
+    store = m = r = 0
+    mainlen = len(my_list)
+    while r < mainlen:
+        newlist.append(my_list[r])
+        r = r + 1
+    newlist = list(dict.fromkeys(newlist))
+    newlen = len(newlist)
+    while m < newlen:
+        store = store + newlist[m]
+        m = m + 1
     return (store)
