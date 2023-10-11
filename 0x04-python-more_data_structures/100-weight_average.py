@@ -1,9 +1,9 @@
 #!/usr/bin/pyhton3
 def weight_average(my_list=[]):
     listlen = len(my_list)
-    x = 0
-    store1 = 0
-    store2 = 0
+    x = store1 = store2 = 0
+    if listlen is 0:
+        return 0
     while x < listlen:
         store2 = store2 + my_list[x][1]
         store1 = store1 + (my_list[x][0] * my_list[x][1])
