@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 def weight_average(my_list=[]):
     listlen = len(my_list)
     x = store1 = store2 = 0
