@@ -3,6 +3,7 @@ def list_division(my_list_1, my_list_2, list_length):
     alist = []
     m = 0
     for r in range(list_length):
+        m = 0
         try:
             m = my_list_1[r] / my_list_2[r]
         except IndexError:
