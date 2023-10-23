@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    count = 0
-    if(my_list):
+    counter = 0
+    if my_list != None:
         for r in range(x):
             try:
                 print("{}".format(my_list[r]), end='')
-                count += 1
+                counter = counter + 1
             except IndexError:
-                print()
-                return(count)
-    print()
-    return(count)
+                break
+    print("")
+    return(counter)
