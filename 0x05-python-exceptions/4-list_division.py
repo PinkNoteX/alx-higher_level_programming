@@ -8,12 +8,16 @@ def list_division(my_list_1, my_list_2, list_length):
             m = my_list_1[r] / my_list_2[r]
         except IndexError:
             print("out of range")
+            m = 0
         except ValueError:
             print("wrong type")
+            m = 0
         except TypeError:
             print("wrong type")
+            m = 0
         except ZeroDivisionError:
             print("division by 0")
+            m = 0
         finally:
-            alist.append(m or 0)
+            alist.append(m)
     return (alist)
