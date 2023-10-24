@@ -12,6 +12,11 @@ class Square:
         """Calculate area"""
         return (self.__size * self.__size)
 
+    @property
+    def size(self):
+        """Setter for square"""
+        return self.__size
+
     @size.setter
     def size(self, value):
         """Initializes attribute size """
@@ -21,8 +26,3 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-
-    @property
-    def size(self):
-        """Setter for square"""
-        return self.__size
