@@ -41,19 +41,19 @@ class Square:
 
     def my_print(self):
         """Print"""
-        if(self.position[1]):
+        if self.position[1]:
             print('' * self.position[1])
         for r in range(self.size):
-            if(self.position[0]):
+            if self.position[0]:
                 print(" " * self.position[0], end='')
             print("#" * self.size, end='')
             print("")
 
     def __str__(self):
         """Print representation of squares"""
-        if(self.size == 0):
-            return ''
+        if self.size == 0:
+            return ('')
         nw = '\n' * self.position[1]
         hs = "#" * self.size
         sp = ' ' * self.position[0]
-        return nw + '\n'.join(sp + hs for x in range(self.size))
+        return (nw + '\n'.join(sp + hs for x in range(self.size)))
