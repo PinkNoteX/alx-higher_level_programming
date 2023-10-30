@@ -49,7 +49,7 @@ class Rectangle:
     def __str__(self):
         """ string """
         astr = ""
-        if self.width == 0 ir self.height == 0:
+        if self.width == 0 or self.height == 0:
             return astr
         for x in range(self.height):
             astr += '#' * self.width + '\n'
