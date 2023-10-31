@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """nqueen solver"""
 
 
@@ -11,6 +13,7 @@ def killcheck(aqueen, n_queen):
             return False
     return True
 
+
 def printer(aqueen, n_queen):
     """printer"""
     results = []
@@ -18,6 +21,7 @@ def printer(aqueen, n_queen):
     for x in range(n_queen):
         results.append([x, aqueen[x]])
     print(results)
+
 
 def Queen(aqueen, n_queen):
     """backtracker"""
@@ -31,21 +35,22 @@ def Queen(aqueen, n_queen):
             if n_queen < len(aqueen):
                 Queen(aqueen, n_queen + 1)
 
+
 def dobacktrack(s):
     """backtracker"""
     aqueen = [-1 for x in range(s)]
     Queen(aqueen, 0)
+
 
 if __name__ == '__main__':
     import sys
     if len(sys.argv) > 2 or len(sys.argv) == 1:
         print("Usage: nqueens N")
         sys.exit(1)
-    try:
-        s = int(sys.argv[1])
-    except:
+    if sys.argv[1].isdigit() is False:
         print("N must be a number")
         sys.exit(1)
+    s = int(sys.argv[1])
     if s < 4:
         print("N must be at least 4")
         sys.exit(1)
