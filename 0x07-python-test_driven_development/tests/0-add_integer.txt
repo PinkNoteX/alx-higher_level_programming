@@ -1,0 +1,64 @@
+===========================
+Tests for 0-add_integer.py
+===========================
+
+>>> add_integer = __import__ ('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(10, 3.7)
+13
+
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer(2.0, 3.0)
+5
+
+>>> add_integer(-2.9, -0.2)
+-2
+
+>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer('hello', 43)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(None, 'alx')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(9223372036854775807, 1)
+9223372036854775808
+
+>>> add_integer('13a', 'hello')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(25, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(25, [1, 6, 3])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
