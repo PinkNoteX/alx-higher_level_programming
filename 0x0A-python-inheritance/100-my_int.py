@@ -5,7 +5,7 @@
 class MyInt(int):
     """ the class """
 
-    def init(self, value):
+    def __init__(self, value):
         """ init """
         self.value = value
 
