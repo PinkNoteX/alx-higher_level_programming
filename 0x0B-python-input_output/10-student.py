@@ -19,4 +19,3 @@ class Student:
             if hasattr(self, x):
                 ndict[x] = getattr(self, x)
         return ndict
-
