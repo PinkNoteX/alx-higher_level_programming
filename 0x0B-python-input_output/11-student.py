@@ -19,7 +19,7 @@ class Student:
             if hasattr(self, x):
                 ndict[x] = getattr(self, x)
         return ndict
-    
+
     def reload_from_json(self, json):
         """ reload from json """
         self.__dict__.update(json)
