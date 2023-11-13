@@ -116,5 +116,3 @@ class Base:
         with open('{}'.format(cls.__name__), 'w', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(altd)
-
-
