@@ -68,4 +68,3 @@ class Base:
         for dictionary in objlist:
             alist.append(cls.create(**dictionary))
         return alist
-
