@@ -54,3 +54,18 @@ class Base:
             return new
         else:
             return None
+
+    @classmethod
+    def load_from_file(cls):
+        """ load from file """
+        alist = []
+        try:
+            with open('{}.json'.format(cls.__name__), 'r',
+                      encoding='utf-8') as x:
+                objlist = cls.from_json_string(x.read())
+        except IOError:
+            return []
+        for dictionary in objlist:
+            alist.append(cls.create(**dictionary))
+        return alist
+
