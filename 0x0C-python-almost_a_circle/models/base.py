@@ -21,3 +21,14 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def save_to_file(cls, list_objs):
+        """ save to json """
+        adict = []
+        if not list_objs:
+            list_objs = []
+        for x in list_objs:
+            adict.append(x.to_dictionary())
+        with open('{}.json'.format(cls.__name__), 'w', encoding='utf-8') as r:
+            r.write(cls.to_json_string(adict))
