@@ -28,7 +28,6 @@ class Base:
         adict = []
         if not list_objs:
             list_objs = []
-        
         for x in list_objs:
             adict.append(x.to_dictionary())
 
