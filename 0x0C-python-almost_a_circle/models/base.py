@@ -22,13 +22,15 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
-    @staticmethod
+    @classmethod
     def save_to_file(cls, list_objs):
         """ save to json """
         adict = []
         if not list_objs:
-            pass
-        for x in len(list_objs):
-            adict.append(list_objs[x].to_dictionary())
+            list_objs = []
+        
+        for x in list_objs:
+            adict.append(x.to_dictionary())
+
         with open('{}.json'.format(cls.__name__), 'w', encoding='utf-8') as r:
             r.write(cls.to_json_string(adict))
