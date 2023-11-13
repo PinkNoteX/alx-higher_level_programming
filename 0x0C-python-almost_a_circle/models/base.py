@@ -33,3 +33,10 @@ class Base:
 
         with open('{}.json'.format(cls.__name__), 'w', encoding='utf-8') as r:
             r.write(cls.to_json_string(adict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ from json """
+        if json_string is None:
+            return []
+        return json.loads(json_string)
