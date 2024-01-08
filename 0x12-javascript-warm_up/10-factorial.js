@@ -6,7 +6,7 @@ function fact (x) {
   if ((Number.isNaN(x) || x < 2)) {
     return 1;
   } else {
-    return x * fact(x-1);
+    return x * fact(x - 1);
   }
 }
 
