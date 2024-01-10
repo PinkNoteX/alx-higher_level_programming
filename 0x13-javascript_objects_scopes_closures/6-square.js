@@ -7,7 +7,7 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c === undifined) {
+    if (c === undefined) {
       c = 'X';
     }
     for (let id = 0; id < this.height; id++) {
