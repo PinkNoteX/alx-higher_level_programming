@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # display the value of the x-request-id var in header of the response
-
 from urllib import request
 import sys
 
