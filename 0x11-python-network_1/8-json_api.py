@@ -5,14 +5,14 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        val = sys.argv[1]
+        v = sys.argv[1]
     else:
-        val = ""
-    req = requests.post("http://0.0.0.0:5000/search_user", data={'q': val})
+        v = ""
+    r = requests.post("http://0.0.0.0:5000/search_user", data={'q': v})
     try:
-        if req.json():
-            print("[{}] {}".format(req.json().get('id'), req.json().get('name')))
+        if r.json():
+            print("[{}] {}".format(r.json().get('id'), r.json().get('name')))
         else:
             print("No result")
-    except:
+    except Exception:
         print("Not a valid JSON")
