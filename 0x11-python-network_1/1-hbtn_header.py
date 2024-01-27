@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# display the value of the x-request-id var in header
+"""display the value of the x-request-id var in header"""
 import urllib.request
 import sys
 
