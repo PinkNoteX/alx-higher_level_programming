@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# send req and display body of response
+""" send req and display body of response """
 
 from urllib import request, parse, error
 import sys
